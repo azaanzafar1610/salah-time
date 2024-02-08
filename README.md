@@ -12,6 +12,9 @@
 - 4 - pip install -r requirements.txt
 - 5 - python manage.py runserver
 
+- Note: To enable live 'adhan (prayer)' audio, you will need to give your browser permission to autoplay audio/video:
+  - https://championcr.com/topic/enable-auto-play/#:~:text=Mac%2C%20and%20Firefox.-,Google%20Chrome,)%E2%80%9D%20to%20%E2%80%9CAllow%E2%80%9C
+
 # Tech Stack
 - Django
 - JavaScript
