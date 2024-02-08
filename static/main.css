@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap');
+
+.card-body-video{
+    height:100%;
+
+    background-color: green;
+
+}
+.alerts-border {
+    border: 5px #fe186c solid;
+    
+    animation: blink 1s;
+    animation-iteration-count: 1000000000;
+
+
+}
+
+@keyframes blink { 50% { border-color:#fff ; }  }
+
+
+.card-title{
+
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 2px, transparent 2px) 0% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 2px, transparent 2px) 100% 0%/8px 8px no-repeat,
+            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 2px, transparent 2px) 0% 100%/8px 8px no-repeat,
+            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 2px, transparent 2px) 100% 100%/8px 8px no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 12px) calc(100% - 16px) no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 12px) no-repeat,
+            conic-gradient(from 340deg at 30% 55%, transparent 0%, rgba(227,20,143,0.68) 100%) 69% 74%/104% 194%,
+            linear-gradient(122deg, #fe186c 0%, #e7c731 34.566%, #f8b304 61.884%, #f5250d 100%);
+border-radius: 8px;
+padding: 10px;
+box-sizing: border-box;
+opacity: 0.9;   
+}
+
+
+.card-text{
+    font-size: 30px;
+    color:rgb(160, 4, 152);
+    font-weight: bold;
+}
+
+.card-text-jamah{
+    font-size: 30px;
+    color:rgb(160, 4, 152);
+    font-weight: bold;
+    text-align: right;
+}
+
+
+
+#datetime,#ramadan_counter{
+    color:white;
+    font-size: 70px;
+    font-family: 'Montserrat Alternates', sans-serif;
+
+}
+
+.box {
+    --border-size: 3px;
+    --border-angle: 0turn;
+    width: 60vmin;
+    height: 50vmin;
+    background-image: conic-gradient(
+        from var(--border-angle),
+        #213,
+        #112 50%,
+        #213
+      ),
+      conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2))
+        calc(100% - (var(--border-size) * 2)),
+      cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  
+    animation: bg-spin 3s linear infinite;
+    @keyframes bg-spin {
+      to {
+        --border-angle: 1turn;
+      }
+    }
+  
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+  
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+  
+

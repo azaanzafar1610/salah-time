@@ -1,0 +1,280 @@
+{% extends './main_forprayer.html' %}
+
+{% block content %}
+
+<div class="container" >
+  <div class="row justify-content-md-center">
+    <div class="col-lg-4" style="margin-top:0%;">
+      <audio id="audio" hidden controls  src="/static/adhan_audio/adhan1.mp3"></audio>
+      <audio id="audio_morning_dua" hidden controls  src="/static/dua_audio/morning_dua.mp3"></audio>
+      <p id="datetime" ></p>
+         
+  </div>
+
+    <div class="row " >
+      <div class="col-lg-4 " style="margin-top:0%;">
+        {% if time == fajr %}
+        <meta http-equiv="refresh" content="260">
+        <div class="card " style="width: 18rem; border:5px solid rgb(0, 255, 0);">
+          
+        {% else %}
+        
+        <div class="card " style="min-width: 18rem; ">
+
+        {% endif %}
+            <div class="card-body">
+              <h2 class="card-title">Fajr فجر</h2>
+              <hr>
+              <table style="width:70%">
+                <tr>
+                  <td><h6 class="card-subtitle mb-2 text-muted">آذان</h6></td>
+                  <td><h6 class="card-subtitle mb-2 text-muted" >جماعت</h6></td>
+                </tr>
+
+                <tr>
+                  <td><p class="card-text" id="fajr">{{fajr}}</p></td>
+                  <td><p class="card-text" id="fajr" >{{fajr_jamah}}</p></td>
+                </tr>
+
+              </table>
+              <span class="badge badge-primary">TIME LEFT</span>
+
+              <hr>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-lg-4 " style="margin-top:0%;">
+        {% if time == Zuhr %}
+        <meta http-equiv="refresh" content="260">
+        <div class="card " style="width: 18rem; border:5px solid rgb(0, 255, 0);">
+        <audio hidden controls autoplay src="/static/adhan_audio/adhan1.mp3"></audio>
+        {% else %}
+        
+        <div class="card " style="min-width: 18rem; ">
+
+        {% endif %}
+            <div class="card-body">
+              <h2 class="card-title">Zuhr ظہر</h5>
+                <hr>
+                <table style="width:70%">
+                  <tr>
+                    <td><h6 class="card-subtitle mb-2 text-muted">آذان</h6></td>
+                    <td><h6 class="card-subtitle mb-2 text-muted" >جماعت</h6></td>
+                  </tr>
+  
+                  <tr>
+                    <td><p class="card-text" id="fajr">{{zuhr}}</p></td>
+                    <td><p class="card-text" id="fajr" >{{zuhr_jamah}}</p></td>
+                  </tr>
+                  
+                </table>
+
+              <span class="badge badge-primary">TIME LEFT</span>
+
+              <hr>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+             
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 " style="margin-top:0%;">
+        {% if time == asr %}
+        <meta http-equiv="refresh" content="260">
+        <div class="card " style="width: 18rem; border:5px solid rgb(0, 255, 0);">
+        <audio hidden controls autoplay src="/static/adhan_audio/adhan1.mp3"></audio>
+        {% else %}
+        
+        <div class="card " style="min-width: 18rem; ">
+
+        {% endif %}
+            <div class="card-body">
+              <h2 class="card-title">Asr عصر</h5>
+                <hr>
+                <table style="width:70%">
+                  <tr>
+                    <td><h6 class="card-subtitle mb-2 text-muted">آذان</h6></td>
+                    <td><h6 class="card-subtitle mb-2 text-muted" >جماعت</h6></td>
+                  </tr>
+  
+                  <tr>
+                    <td><p class="card-text" id="fajr">{{asr}}</p></td>
+                    <td><p class="card-text" id="fajr" >{{asr_jamah}}</p></td>
+                  </tr>
+                  
+                </table>
+
+              <span class="badge badge-primary">TIME LEFT</span>
+
+              <hr>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+            
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 " style="margin-top:3%;">
+        {% if time == maghrib %}
+        <meta http-equiv="refresh" content="260">
+        <div class="card " style="width: 18rem; border:5px solid rgb(0, 255, 0);">
+        <audio hidden controls autoplay src="/static/adhan_audio/adhan1.mp3"></audio>
+        {% else %}
+        
+        <div class="card " style="min-width: 18rem; ">
+
+        {% endif %}
+            <div class="card-body">
+              <h2 class="card-title">Maghrib مغرب</h5>
+              <hr>
+              <table style="width:70%">
+                <tr>
+                  <td><h6 class="card-subtitle mb-2 text-muted">آذان</h6></td>
+                  <td><h6 class="card-subtitle mb-2 text-muted" >جماعت</h6></td>
+                </tr>
+
+                <tr>
+                  <td><p class="card-text" id="fajr">{{maghrib}}</p></td>
+                  <td><p class="card-text" id="fajr" >{{maghrib_jamah}}</p></td>
+                </tr>
+                
+              </table>
+              <span class="badge badge-primary">TIME LEFT</span>
+
+              <hr>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+          
+            </div>
+          </div>
+      </div>
+
+      <div class="col-lg-4 " style="margin-top:3%;">
+        {% if time == isha %}
+        <meta http-equiv="refresh" content="260">
+        <div class="card " style="width: 18rem; border:5px solid rgb(0, 255, 0);">
+        <audio hidden controls autoplay src="/static/adhan_audio/adhan1.mp3"></audio>
+        {% else %}
+        
+        <div class="card " style="min-width: 18rem; ">
+
+        {% endif %}
+        
+            <div class="card-body">
+              <h2 class="card-title">Isha عشاء</h5>
+                <hr>
+                <table style="width:70%">
+                  <tr>
+                    <td><h6 class="card-subtitle mb-2 text-muted">آذان</h6></td>
+                    <td><h6 class="card-subtitle mb-2 text-muted" >جماعت</h6></td>
+                  </tr>
+  
+                  <tr>
+                    <td><p class="card-text" id="fajr">{{isha}}</p></td>
+                    <td><p class="card-text" id="fajr" >{{isha_jamah}}</p></td>
+                  </tr>
+                  
+                </table>
+              <span class="badge badge-primary">TIME LEFT</span>
+
+              <hr>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+              </div>
+             
+            </div>
+          </div>
+      </div>
+
+      <div class="col-lg-4" style="margin-top: 3%;">
+        <div class="card " style="width: auto;">
+            <div class="col-lg-4">
+              <iframe height="200px" width="auto"
+              src="https://www.youtube.com/embed/gUC3TjCrwRw?autoplay=1&mute=1" allow="autoplay"> 
+              </iframe>
+              
+            </div>
+          </div>
+      </div>    
+    </div>
+  </div>
+
+
+<script>
+    
+
+
+    var span = document.getElementById('datetime');
+
+    function time() {
+      var d = new Date();
+      var s = d.getSeconds();
+      var m = d.getMinutes();
+      var h = d.getHours();
+      span.textContent = 
+        ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+    }
+
+    var fajr = document.getElementById('fajr').innerHTML
+    //span.textContent=("loading...");
+
+setInterval(time, 1000);
+
+
+function CheckTime() {
+  const currentTime = new Date();
+  hour = currentTime.getHours();
+  minute = currentTime.getMinutes();
+  second = currentTime.getSeconds();
+  if (hour < 10){hour = "0" + hour;}
+  if (minute < 10){minute = "0" + minute;}
+  if (second < 10){second = "0" + second;}
+
+  
+
+  if ("{{fajr_time}}"==String(hour)+":"+String(minute)){
+    
+    let myAudio = document.querySelector('#audio');
+    myAudio.play();
+
+    
+  } else if ("{{asr_time}}" == String(hour)+":"+String(minute) ){
+      let myAudio = document.querySelector('#audio');
+      myAudio.play();
+
+  } else if ("{{maghrib_time}}" == String(hour)+":"+String(minute) ){
+      let myAudio = document.querySelector('#audio');
+      myAudio.play();
+  
+  } else if ("{{isha_time}}" == String(hour)+":"+String(minute) ){
+      let myAudio = document.querySelector('#audio');
+      myAudio.play();
+      
+      
+
+  }
+  // else if("18:49" == String(hour)+":"+String(minute) ){
+  //       let myAudio_dua = document.querySelector('#audio_morning_dua');
+  //       myAudio_dua.play();
+  //     }
+      else {
+    console.log("if statement not working for function CheckTime");
+  }
+
+}
+
+//run checkTime function every second
+setInterval(CheckTime, 1000);
+
+    </script>
+    
+
+
+    
+  {% endblock content %}
