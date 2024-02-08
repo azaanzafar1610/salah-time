@@ -1,7 +1,7 @@
 # salah-time
 - A webscraper which scrapes 'prayer times' from a live mosque website. 
 - Prayer audio, the 'adhan', is played at each prayer time (total 5 times/day). 
-
+- Live Demo: https://salah-time-ba63813ffa04.herokuapp.com/
 # Installation
 - 1 - clone repo https://github.com/azaanzafar1610/salah-time
 - 2 - create a virtual environment and activate
